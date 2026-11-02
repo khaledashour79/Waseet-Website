@@ -160,10 +160,11 @@
 
   /* ---- metrics band ---- */
   .metrics{background:var(--ink);color:var(--on-ink)}
-  .mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-  .mgrid .v{font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(2rem,4vw,2.9rem);
-    color:var(--amber);font-variant-numeric:tabular-nums}
-  .mgrid .l{color:var(--on-ink-soft);font-size:.9rem;margin-top:6px}
+  .mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:start;margin-top:42px}
+  .mgrid > div{border-top:2px solid var(--amber);padding-top:16px}
+  .mgrid .mh{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.12rem;color:var(--on-ink)}
+  :root[dir="rtl"] .mgrid .mh{font-family:"IBM Plex Sans Arabic",sans-serif}
+  .mgrid .l{color:var(--on-ink-soft);font-size:.92rem;margin-top:8px;line-height:1.5}
   @media (max-width:640px){.mgrid{grid-template-columns:1fr 1fr;gap:28px 16px}}
 
   /* ---- governance ---- */
@@ -327,7 +328,7 @@
       </ul>
     </div>
     <div class="screen" aria-hidden="true">
-      <div class="bar2"><span data-i="scTitle">Control Tower — Network</span><span data-i="scLive">● Live</span></div>
+      <div class="bar2"><span data-i="scTitle">Control Tower — sample view</span><span data-i="scLive">Illustrative</span></div>
       <div class="kpi">
         <div><div class="v">98.6%</div><div class="l" data-i="k1">On-time delivery</div></div>
         <div><div class="v">14.2k</div><div class="l" data-i="k2">Shipments / month</div></div>
@@ -341,11 +342,15 @@
 
 <section id="metrics" class="metrics">
   <div class="wrap">
+    <div class="sec-head" style="max-width:62ch">
+      <p class="eyebrow" data-i="mKicker">Why Waseet</p>
+      <h2 style="color:var(--on-ink)" data-i="mTitle">Coverage, visibility and control across the Kingdom.</h2>
+    </div>
     <div class="mgrid">
-      <div><div class="v">13</div><div class="l" data-i="m1">Regions served</div></div>
-      <div><div class="v">37</div><div class="l" data-i="m2">Distribution sites</div></div>
-      <div><div class="v">1,180</div><div class="l" data-i="m3">Vehicles on network</div></div>
-      <div><div class="v">98.6%</div><div class="l" data-i="m4">On-time delivery</div></div>
+      <div><div class="mh" data-i="m1t">Nationwide reach</div><div class="l" data-i="m1">Services spanning the Kingdom's main commercial centres and ports.</div></div>
+      <div><div class="mh" data-i="m2t">Real-time visibility</div><div class="l" data-i="m2">Live tracking from pickup to delivery on one platform.</div></div>
+      <div><div class="mh" data-i="m3t">In-Kingdom data</div><div class="l" data-i="m3">Hosting and data handling aligned to Saudi requirements.</div></div>
+      <div><div class="mh" data-i="m4t">Audit-ready</div><div class="l" data-i="m4">Every action logged to support clean internal controls.</div></div>
     </div>
   </div>
 </section>
@@ -358,7 +363,7 @@
       <p data-i="gvLede">Technology and operating practices designed to support strong governance, regulatory compliance and shareholder trust.</p>
     </div>
     <div class="govgrid">
-      <div class="govcard"><h3><span class="badge"></span><span data-i="g1t">Corporate governance</span></h3><p data-i="g1p">Board-level oversight and controls aligned with CMA and Tadawul listing expectations.</p></div>
+      <div class="govcard"><h3><span class="badge"></span><span data-i="g1t">Corporate governance</span></h3><p data-i="g1p">Oversight, controls and reporting designed to support the standards expected of regulated companies in the Kingdom.</p></div>
       <div class="govcard"><h3><span class="badge"></span><span data-i="g2t">Data protection</span></h3><p data-i="g2p">Practices designed around Saudi PDPL and secure, in-Kingdom data handling.</p></div>
       <div class="govcard"><h3><span class="badge"></span><span data-i="g3t">Tax &amp; e-invoicing</span></h3><p data-i="g3p">Workflows built to support ZATCA e-invoicing (Fatoora) and transparent reporting.</p></div>
       <div class="govcard"><h3><span class="badge"></span><span data-i="g4t">Internal controls</span></h3><p data-i="g4p">Segregation of duties, audit trails and exception reporting embedded in the platform.</p></div>
@@ -387,12 +392,16 @@
     </div>
     <div><h4 data-i="footC1">Solutions</h4><a href="#solutions" data-i="s1t">Freight Marketplace</a><a href="#solutions" data-i="s2t">Fleet &amp; Telematics</a><a href="#solutions" data-i="s4t">Warehouse Management</a></div>
     <div><h4 data-i="footC2">Company</h4><a href="#governance" data-i="nav4">Governance</a><a href="#metrics" data-i="nav3">Network</a><a href="#contact" data-i="nav5">Contact</a></div>
-    <div><h4 data-i="footC3">Contact</h4><a href="#contact" data-i="footAddr">Riyadh, Saudi Arabia</a><a href="#contact">info@waseet.example</a></div>
+    <div><h4 data-i="footC3">Contact</h4>
+      <a href="tel:+966556661919" dir="ltr">+966 55 666 1919</a>
+      <a href="mailto:Info@waseetlogistics.com">Info@waseetlogistics.com</a>
+      <a href="#contact" data-i="footAddr">Building No. 9357, Alfarazdaq St, Al Malaz, Riyadh 12642</a>
+    </div>
   </div>
-  <div class="wrap copy" data-i="copy">© 2026 Waseet Logistics. All rights reserved.</div>
+  <div class="wrap copy" data-i="copy">© 2026 Waseet Logistics Services. All rights reserved.</div>
 </footer>
 
-<div class="note"><div class="wrap" data-i="note">Design concept — all figures, names and claims shown are illustrative placeholders for review and must be replaced with verified company data before publication.</div></div>
+<div class="note"><div class="wrap" data-i="note">This site is in preparation. Service descriptions and governance statements are being finalised and are subject to management and compliance review before launch.</div></div>
 
 <script>
 /* ---------- bilingual content (EN / AR, full RTL) ---------- */
@@ -418,20 +427,24 @@ const AR = {
   f1t:"واجهات برمجية وتكاملات مفتوحة", f1p:"اتصل بأنظمة تخطيط الموارد والتجارة الإلكترونية وأنظمة الشركاء لتتدفق البيانات مرة واحدة وتتطابق في كل مكان.",
   f2t:"صلاحيات حسب الدور وسجلات تدقيق", f2p:"كل إجراء قابل للنسبة، بما يدعم الضوابط الداخلية وأدلة التدقيق النظيفة.",
   f3t:"استضافة داخل المملكة", f3p:"إقامة البيانات والأمن بما يتوافق مع المتطلبات التنظيمية السعودية.",
-  scTitle:"برج التحكّم — الشبكة", scLive:"● مباشر",
+  scTitle:"برج التحكّم — عرض توضيحي", scLive:"توضيحي",
   k1:"التسليم في الموعد", k2:"شحنة / شهرياً", k3:"مركبة نشطة", k4:"مواقع التوزيع",
-  m1:"منطقة مخدومة", m2:"موقع توزيع", m3:"مركبة على الشبكة", m4:"التسليم في الموعد",
+  mKicker:"لماذا وسيط", mTitle:"تغطية ورؤية وتحكّم في جميع أنحاء المملكة.",
+  m1t:"انتشار وطني", m1:"خدمات تغطي أبرز المراكز التجارية والموانئ في المملكة.",
+  m2t:"رؤية لحظية", m2:"تتبّع مباشر من الاستلام حتى التسليم على منصّة واحدة.",
+  m3t:"بيانات داخل المملكة", m3:"استضافة ومعالجة بيانات متوافقة مع المتطلبات السعودية.",
+  m4t:"جاهزية للتدقيق", m4:"تسجيل كل إجراء لدعم ضوابط داخلية سليمة.",
   gvKicker:"الحوكمة والامتثال", gvTitle:"تُدار وفق معايير الشركات المدرجة.",
   gvLede:"تقنيات وممارسات تشغيلية مصمّمة لدعم الحوكمة القوية والامتثال التنظيمي وثقة المساهمين.",
-  g1t:"حوكمة الشركات", g1p:"إشراف وضوابط على مستوى المجلس بما يتوافق مع متطلبات هيئة السوق المالية وتداول.",
+  g1t:"حوكمة الشركات", g1p:"إشراف وضوابط وتقارير مصمّمة لدعم المعايير المتوقّعة من الشركات المنظّمة في المملكة.",
   g2t:"حماية البيانات", g2p:"ممارسات مصمّمة حول نظام حماية البيانات الشخصية السعودي ومعالجة آمنة للبيانات داخل المملكة.",
   g3t:"الضريبة والفوترة الإلكترونية", g3p:"إجراءات مبنية لدعم الفوترة الإلكترونية من هيئة الزكاة والضريبة والجمارك (فاتورة) والإفصاح الشفّاف.",
   g4t:"الضوابط الداخلية", g4p:"فصل المهام وسجلات التدقيق وتقارير الاستثناءات مدمجة داخل المنصّة.",
   ctaTitle:"لننقل سلسلة إمدادك إلى الأمام.", ctaLede:"تحدّث إلى فريقنا حول تقييم المنصّة المناسب لعملياتك.", ctaBtn:"احجز استشارة",
   footBlurb:"تطبيقات لوجستية تربط التجارة السعودية من الميل الأول حتى التسليم النهائي.",
-  footC1:"الحلول", footC2:"الشركة", footC3:"تواصل", footAddr:"الرياض، المملكة العربية السعودية",
+  footC1:"الحلول", footC2:"الشركة", footC3:"تواصل", footAddr:"مبنى رقم 9357، شارع الفرزدق، حي الملز، الرياض 12642",
   copy:"© 2026 وسيط للخدمات اللوجستية. جميع الحقوق محفوظة.",
-  note:"تصميم مبدئي — جميع الأرقام والأسماء والبيانات المعروضة هي عناصر توضيحية للمراجعة ويجب استبدالها ببيانات الشركة الموثّقة قبل النشر."
+  note:"هذا الموقع قيد الإعداد. أوصاف الخدمات وبيانات الحوكمة قيد الاستكمال وتخضع لمراجعة الإدارة والامتثال قبل الإطلاق الرسمي."
 };
 const EN = {}; // original markup holds English
 document.querySelectorAll("[data-i]").forEach(el=>{EN[el.dataset.i]=el.innerHTML;});
